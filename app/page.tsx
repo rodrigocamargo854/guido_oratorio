@@ -197,7 +197,7 @@ export default function Home() {
           <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '0 24px', width: '100%' }}>
 
             <p className="hero-eyebrow" style={{ display: 'inline-block', fontSize: 10, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: C.branco, marginBottom: 16,  marginTop:16,background: 'rgba(46,111,149,0.15)', padding: '6px 16px', borderRadius: 100, border: `1px solid rgba(46,111,149,0.3)`, fontFamily: "'Montserrat', sans-serif" }}>
-              Paróquia Catedral São Paulo Apóstolo · Diocese de Blumenau
+               Catedral São Paulo Apóstolo · Diocese de Blumenau
             </p>
 
             <div className="hero-logo-wrap" style={{ marginBottom: 20 }}>
@@ -400,7 +400,7 @@ export default function Home() {
       </main>
 
       {/* WhatsApp flutuante */}
-      <a
+     /* <a
         href="https://wa.me/SEUNUMERO"
         target="_blank"
         rel="noopener noreferrer"
@@ -424,7 +424,7 @@ export default function Home() {
         onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
       >
         <WhatsappLogoIcon size={30} weight="fill" />
-      </a>
+      </a> */
     </>
   )
 }
