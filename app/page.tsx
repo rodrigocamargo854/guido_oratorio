@@ -131,7 +131,7 @@ export default function Home() {
   ]
 
   const encontros = [
-    { data: '16/05', label: 'Encontro', spoiler: false },
+    { data: '16/05', label: 'Encontro das 15 ás 18 hrs', spoiler: false },
     { data: '27/06', label: 'Encontro', spoiler: false },
     { data: 'Julho', label: 'Despertai', obs: 'O encontro de Julho será realizado no evento Despertai', spoiler: false },
     { data: '22/08', label: 'Encontro', spoiler: false },
