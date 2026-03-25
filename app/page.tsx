@@ -3,8 +3,8 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import {
-  CheckCircle, HandHeart, Butterfly, HandsPraying, UsersThree, Heartbeat,
-  Sun, Waves, Cross, WhatsappLogoIcon, CalendarCheckIcon,
+  CheckCircleIcon, HandHeartIcon, ButterflyIcon, HandsPrayingIcon, UsersThreeIcon, HeartbeatIcon,
+  SunIcon, WavesIcon, CrossIcon, WhatsappLogoIcon, CalendarCheckIcon, TentIcon, CampfireIcon, MoonIcon,
 } from '@phosphor-icons/react'
 
 const C = {
@@ -100,19 +100,45 @@ export default function Home() {
   useReveal()
 
   const valores = [
-    { num: '01', nome: '-', desc: '....', icon: <CheckCircle size={20} weight="duotone" /> },
-    { num: '02', nome: '-', desc: '....', icon: <UsersThree size={20} weight="duotone" /> },
-    { num: '03', nome: '- ', desc: '....', icon: <Butterfly size={20} weight="duotone" /> },
-    { num: '04', nome: '-', desc: '....', icon: <HandsPraying size={20} weight="duotone" /> },
-    { num: '05', nome: '--  ', desc: '....', icon: <HandHeart size={20} weight="duotone" /> },
-    { num: '06', nome: '-', desc: '....', icon: <Heartbeat size={20} weight="duotone" /> },
-    { num: '07', nome: '-', desc: '....', icon: <HandHeart size={20} weight="duotone" /> },
+    { num: '01', nome: 'Verdade', desc: 'Buscar e viver a verdade que liberta', icon: <CheckCircleIcon size={20} weight="duotone" /> },
+    { num: '02', nome: 'Amizade', desc: 'Laços fraternos baseados na fé', icon: <UsersThreeIcon size={20} weight="duotone" /> },
+    { num: '03', nome: 'Liberdade Interior', desc: 'Livre para amar e servir', icon: <ButterflyIcon size={20} weight="duotone" /> },
+    { num: '04', nome: 'Oração', desc: 'O coração de tudo que fazemos', icon: <HandsPrayingIcon size={20} weight="duotone" /> },
+    { num: '05', nome: 'Respeito', desc: 'Olhar o outro como imagem de Deus', icon: <HandHeartIcon size={20} weight="duotone" /> },
+    { num: '06', nome: 'Empatia', desc: 'Sentir com o outro, caminhar junto', icon: <HeartbeatIcon size={20} weight="duotone" /> },
+    { num: '07', nome: 'Serviço', desc: 'Sair de si para ir ao encontro do outro', icon: <HandHeartIcon size={20} weight="duotone" /> },
   ]
 
   const simbolos = [
-    { icon: <Sun size={28} weight="duotone" color="#f5a623" />, titulo: 'texto', cor: '#f5a623', desc: 'Deus Pai — criador de todas as coisas, que sustenta e renova a vida a cada amanhecer.' },
-    { icon: <Cross size={28} weight="duotone" color={C.verde} />, titulo: ' texto ', cor: C.verde, desc: 'Jesus Cristo — centro de nossas vidas, que abriu os braços para abraçar toda a humanidade.' },
-    { icon: <Waves size={28} weight="duotone" color={C.azul} />, titulo: ' texto', cor: C.azul, desc: 'O Espírito Santo em movimento — dinamismo que traz vida, renovação e impulso missionário.' },
+    {
+      icon: <SunIcon size={28} weight="duotone" color="#f5a623" />,
+      titulo: 'Sol',
+      cor: '#f5a623',
+      desc: 'O sol representa Deus Pai, criador de todas as coisas, aquele que cria e sustenta toda a vida.',
+    },
+    {
+      icon: <CrossIcon size={28} weight="duotone" color={C.verde} />,
+      titulo: 'Prancha de madeira com Cruz',
+      cor: C.verde,
+      desc: 'A prancha de madeira com a cruz simboliza o próprio Cristo no madeiro da cruz, que abriu os braços para abraçar e redimir toda a humanidade, nos trazendo vida em abundância. Aparece no centro como sinal de que Jesus deve ser o centro de nossas vidas.',
+    },
+    {
+      icon: <WavesIcon size={28} weight="duotone" color={C.azul} />,
+      titulo: 'Onda',
+      cor: C.azul,
+      desc: 'A água em movimento simboliza o Espírito Santo. A santidade exige movimento — um adolescente estagnado é como água parada. O dinamismo do Espírito traz vida, renovação e impulso missionário.',
+    },
+  ]
+
+  const encontros = [
+    { data: '16/05', label: 'Encontro', spoiler: false },
+    { data: '27/06', label: 'Encontro', spoiler: false },
+    { data: 'Julho', label: 'Despertai', obs: 'O encontro de Julho será realizado no evento Despertai', spoiler: false },
+    { data: '22/08', label: 'Encontro', spoiler: false },
+    { data: '12/09', label: 'Encontro', spoiler: false },
+    { data: '10/10', label: 'Encontro', spoiler: false },
+    { data: '14/11', label: 'Encontro', spoiler: false },
+    { data: '4–6/12', label: 'Spoiler', spoiler: true },
   ]
 
   return (
@@ -183,8 +209,9 @@ export default function Home() {
               <span style={{ color: C.azulClaro }}>Uma missão.</span>
             </h1>
 
-            <p className="hero-tagline" style={{ fontSize: 'clamp(13px, 3.5vw, 16px)', color: 'rgba(232,220,197,0.9)', fontWeight: 300, fontStyle: 'italic', marginBottom: 36, fontFamily: "'Montserrat', sans-serif" }}>
-              Santidade como aventura que exige coragem e radicalidade.
+            <p className="hero-tagline" style={{ fontSize: 'clamp(13px, 3.5vw, 16px)', color: 'rgba(232,220,197,0.9)', fontWeight: 300, marginBottom: 36, fontFamily: "'Montserrat', sans-serif", lineHeight: 1.6 }}>
+              Já sentiu a sensação de estar caminhando sem direção?<br />
+              <strong style={{ fontWeight: 700, color: C.bege }}>VEM COM A GENTE DESCOBRIR O CAMINHO CERTO E VIVER UMA MISSÃO DE VERDADE!</strong>
             </p>
 
             <div className="hero-btns" style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 320, margin: '0 auto' }}>
@@ -217,7 +244,7 @@ export default function Home() {
 
         <section id="guido" style={{ background: C.bege, padding: '72px 24px' }}>
           <div style={{ textAlign: 'center', marginBottom: 32 }} className="reveal">
-            <Chip variant="verde">Nosso jovem balizarte</Chip>
+            <Chip variant="verde">Nosso jovem baluarte</Chip>
             <SectionTitle color={C.verde}>Conheça<br />Guido Schäffer</SectionTitle>
             <p style={{ fontSize: 14, fontWeight: 300, lineHeight: 1.75, color: '#6a5a45', maxWidth: 340, margin: '0 auto', fontFamily: "'Montserrat', sans-serif" }}>
               Médico, surfista, carioca e profundamente apaixonado por Deus e pela vida. Guido mostra que é possível ser jovem, alegre e completamente entregue a Deus.
@@ -248,29 +275,24 @@ export default function Home() {
             </p>
           </div>
 
-          {/* FORMULÁRIO — substitua pelo iframe do Google Forms */}
-          {/* <iframe src="URL_DO_GOOGLE_FORMS" width="100%" height="600" style={{ border: 'none', borderRadius: 20 }} /> */}
-          <div className="reveal d2" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, padding: '28px 20px', maxWidth: 420, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24, paddingBottom: 16, borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-              <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.5rem', color: C.branco, letterSpacing: '0.05em' }}>Link Inscrição</h3>
-              <span style={{ background: 'rgba(232,220,197,0.15)', color: C.bege, fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 100, fontFamily: "'Montserrat', sans-serif" }}>
-                {/* SUBSTITUIR pelo número do encontro */}
-                Encontro #01
-              </span>
-            </div>
- 
-             <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px dashed rgba(255,255,255,0.15)', borderRadius: 12, padding: '40px 20px', textAlign: 'center', color: 'rgba(255,255,255,0.25)', fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', fontFamily: "'Montserrat', sans-serif" }}>
-              <span style={{ fontSize: 28, display: 'block', marginBottom: 10, opacity: 0.3 }}>📋</span>
-              iframe do Google Forms aqui
-            </div>
+          <div className="reveal d2" style={{ maxWidth: 420, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfkOYRtGGi95BLmeGuUUnDjbkSIxpUXWdRhOE0_BmTHGoJWcg/viewform?embedded=true"
+              width="100%"
+              height="700"
+              style={{ border: 'none', borderRadius: 20, display: 'block' }}
+            />
           </div>
         </section>
 
  
         <section style={{ background: C.verdeEscuro, padding: '72px 24px' }}>
           <div style={{ textAlign: 'center', marginBottom: 36 }} className="reveal">
-            <Chip variant="bege">Objetivo</Chip>
-            <SectionTitle color={C.bege}>Propósito<br />dos Encontros</SectionTitle>
+            <Chip variant="bege">Para que existimos</Chip>
+            <SectionTitle color={C.bege}>Nossos<br />valores</SectionTitle>
+            <p style={{ fontSize: 14, fontWeight: 300, color: 'rgba(232,220,197,0.6)', maxWidth: 340, margin: '0 auto', fontFamily: "'Montserrat', sans-serif", lineHeight: 1.7 }}>
+              Descobrir nossa verdadeira identidade, assumi-la e colocá-la a serviço — <em>"viver a aventura a qual somos chamados por Deus de forma simples, alegre e radical."</em>
+            </p>
           </div>
 
           <div style={{ maxWidth: 420, margin: '0 auto' }}>
@@ -288,10 +310,10 @@ export default function Home() {
 
         <section style={{ background: C.bege, padding: '72px 24px' }}>
           <div style={{ textAlign: 'center', marginBottom: 36 }} className="reveal">
-            <Chip variant="verde">O que nos representa</Chip>
-            <SectionTitle color={C.verde}>Texto</SectionTitle>
-            <p style={{ fontSize: 14, fontWeight: 300, color: '#7a6a55', maxWidth: 320, margin: '0 auto', fontFamily: "'Montserrat', sans-serif" }}>
-              Três elementos que expressam a Santíssima Trindade e o espírito de Guido.
+            <Chip variant="verde">Nossa brasão</Chip>
+            <SectionTitle color={C.verde}>Nosso símbolo</SectionTitle>
+            <p style={{ fontSize: 14, fontWeight: 300, color: '#7a6a55', maxWidth: 340, margin: '0 auto', fontFamily: "'Montserrat', sans-serif", lineHeight: 1.75 }}>
+              A combinação do sol, da prancha e da água reúne elementos que expressam a espiritualidade do Guido, sua busca pela santidade e seu amor por Deus e pela vida. O símbolo mostra que é possível ser santo sem deixar de ser jovem, e traz em sua composição a referência à Santíssima Trindade.
             </p>
           </div>
 
@@ -305,6 +327,35 @@ export default function Home() {
                     <span style={{ fontSize: 13, fontWeight: 700, color: C.verde, textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'Montserrat', sans-serif" }}>{s.titulo}</span>
                   </div>
                   <p style={{ fontSize: 13, color: '#7a6a55', lineHeight: 1.65, fontWeight: 300, fontFamily: "'Montserrat', sans-serif" }}>{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CALENDÁRIO */}
+        <section style={{ background: C.azul, padding: '72px 24px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 36 }} className="reveal">
+            <Chip variant="bege">2025</Chip>
+            <SectionTitle color={C.branco}>Próximos<br />encontros</SectionTitle>
+          </div>
+
+          <div style={{ maxWidth: 420, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {encontros.map((e, i) => (
+              <div key={i} className={`reveal d${Math.min(i + 1, 5)}`} style={{ display: 'flex', alignItems: 'center', gap: 16, background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 14, padding: '16px 20px' }}>
+                <div style={{ minWidth: 60, textAlign: 'center' }}>
+                  <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.6rem', color: e.spoiler ? '#f5a623' : C.bege, lineHeight: 1 }}>{e.data}</span>
+                </div>
+                <div style={{ flex: 1 }}>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: C.branco, fontFamily: "'Montserrat', sans-serif" }}>{e.label}</span>
+                  {e.obs && <p style={{ fontSize: 11, color: 'rgba(232,220,197,0.55)', marginTop: 2, fontFamily: "'Montserrat', sans-serif" }}>{e.obs}</p>}
+                  {e.spoiler && (
+                    <div style={{ display: 'flex', gap: 8, marginTop: 6 }}>
+                      <TentIcon size={18} weight="duotone" color="rgba(232,220,197,0.6)" />
+                      <CampfireIcon size={18} weight="duotone" color="rgba(232,220,197,0.6)" />
+                      <MoonIcon size={18} weight="duotone" color="rgba(232,220,197,0.6)" />
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
