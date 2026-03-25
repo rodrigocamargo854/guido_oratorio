@@ -2,6 +2,10 @@
 
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
+import {
+  CheckCircle, HandHeart, Butterfly, HandsPraying, UsersThree, Heartbeat,
+  Sun, Waves, Cross, WhatsappLogoIcon, CalendarCheckIcon,
+} from '@phosphor-icons/react'
 
 const C = {
   verde: '#3F4F3C',
@@ -10,7 +14,7 @@ const C = {
   bege: '#E8DCC5',
   begeEscuro: '#c8b99a',
   azul: '#2E6F95',
-  azulClaro: '#4a8fb5',
+  azulClaro: '#1F9494 ',
   branco: '#FFFFFF',
 }
 
@@ -31,7 +35,7 @@ function useReveal() {
 function Chip({ children, variant = 'verde' }: { children: React.ReactNode; variant?: 'verde' | 'azul' | 'bege' }) {
   const styles = {
     verde: { background: 'rgba(63,79,60,0.12)', color: C.verde },
-    azul: { background: 'rgba(46,111,149,0.12)', color: C.azul },
+    azul: { background: 'rgba(46,111,149,0.12)', color: C.azulClaro },
     bege: { background: 'rgba(232,220,197,0.15)', color: C.bege },
   }
   return (
@@ -96,19 +100,19 @@ export default function Home() {
   useReveal()
 
   const valores = [
-    { num: '01', nome: '-', desc: '....' },
-    { num: '02', nome: '-', desc: '....' },
-    { num: '03', nome: '- ', desc: '....' },
-    { num: '04', nome: '-', desc: '....' },
-    { num: '05', nome: '--  ', desc: '....'},
-    { num: '06', nome: '-', desc: '....' },
-    { num: '07', nome: '-', desc: '....' },
+    { num: '01', nome: '-', desc: '....', icon: <CheckCircle size={20} weight="duotone" /> },
+    { num: '02', nome: '-', desc: '....', icon: <UsersThree size={20} weight="duotone" /> },
+    { num: '03', nome: '- ', desc: '....', icon: <Butterfly size={20} weight="duotone" /> },
+    { num: '04', nome: '-', desc: '....', icon: <HandsPraying size={20} weight="duotone" /> },
+    { num: '05', nome: '--  ', desc: '....', icon: <HandHeart size={20} weight="duotone" /> },
+    { num: '06', nome: '-', desc: '....', icon: <Heartbeat size={20} weight="duotone" /> },
+    { num: '07', nome: '-', desc: '....', icon: <HandHeart size={20} weight="duotone" /> },
   ]
 
   const simbolos = [
-    { icon: '☀️', titulo: 'texto', cor: '#f5a623', desc: 'Deus Pai — criador de todas as coisas, que sustenta e renova a vida a cada amanhecer.' },
-    { icon: '✝️', titulo: ' texto ', cor: C.verde, desc: 'Jesus Cristo — centro de nossas vidas, que abriu os braços para abraçar toda a humanidade.' },
-    { icon: '🌊', titulo: ' texto', cor: C.azul, desc: 'O Espírito Santo em movimento — dinamismo que traz vida, renovação e impulso missionário.' },
+    { icon: <Sun size={28} weight="duotone" color="#f5a623" />, titulo: 'texto', cor: '#f5a623', desc: 'Deus Pai — criador de todas as coisas, que sustenta e renova a vida a cada amanhecer.' },
+    { icon: <Cross size={28} weight="duotone" color={C.verde} />, titulo: ' texto ', cor: C.verde, desc: 'Jesus Cristo — centro de nossas vidas, que abriu os braços para abraçar toda a humanidade.' },
+    { icon: <Waves size={28} weight="duotone" color={C.azul} />, titulo: ' texto', cor: C.azul, desc: 'O Espírito Santo em movimento — dinamismo que traz vida, renovação e impulso missionário.' },
   ]
 
   return (
@@ -184,8 +188,8 @@ export default function Home() {
             </p>
 
             <div className="hero-btns" style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 320, margin: '0 auto' }}>
-              <a href="#forms" style={{ background: C.azul, color: C.branco, padding: '18px 24px', borderRadius: 14, fontWeight: 700, fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', textDecoration: 'none', textAlign: 'center', boxShadow: '0 8px 32px rgba(46,111,149,0.5)', fontFamily: "'Montserrat', sans-serif" }}>
-                ✦ Confirme sua presença
+              <a href="#forms" style={{ background: C.azulClaro, color: C.branco, padding: '18px 24px', borderRadius: 14, fontWeight: 700, fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', textDecoration: 'none', textAlign: 'center', boxShadow: '0 8px 32px rgba(46,111,149,0.5)', fontFamily: "'Montserrat', sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
+                <CalendarCheckIcon size={18} weight="bold" /> Confirme sua presença
               </a>
               <a href="#guido" style={{ background: 'transparent', color: 'rgba(232,220,197,0.7)', padding: '16px 24px', borderRadius: 14, fontWeight: 600, fontSize: 13, letterSpacing: '0.06em', textDecoration: 'none', textAlign: 'center', border: '1.5px solid rgba(232,220,197,0.2)', fontFamily: "'Montserrat', sans-serif" }}>
                 Conheça o Guido →
@@ -232,7 +236,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="forms" style={{ background: C.azul, padding: '72px 24px', position: 'relative', overflow: 'hidden' }}>
+        <section id="forms" style={{ background: C.azulClaro, padding: '72px 24px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', bottom: -100, right: -60, width: 280, height: 280, borderRadius: '50%', background: 'rgba(255,255,255,0.04)', pointerEvents: 'none' }} />
 
           <div style={{ textAlign: 'center', marginBottom: 32, position: 'relative', zIndex: 1 }} className="reveal">
@@ -265,14 +269,14 @@ export default function Home() {
  
         <section style={{ background: C.verdeEscuro, padding: '72px 24px' }}>
           <div style={{ textAlign: 'center', marginBottom: 36 }} className="reveal">
-            <Chip variant="bege">Para que existimos</Chip>
-            <SectionTitle color={C.bege}>Nossos<br />valores</SectionTitle>
+            <Chip variant="bege">Objetivo</Chip>
+            <SectionTitle color={C.bege}>Propósito<br />dos Encontros</SectionTitle>
           </div>
 
           <div style={{ maxWidth: 420, margin: '0 auto' }}>
             {valores.map((v, i) => (
               <div key={i} className={`reveal d${Math.min(i + 1, 5)}`} style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 20px', borderBottom: i < valores.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
-                <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.8rem', color: C.azulClaro, opacity: 0.5, lineHeight: 1, minWidth: 32 }}>{v.num}</span>
+                <span style={{ color: C.azulClaro, opacity: 0.8, flexShrink: 0 }}>{v.icon}</span>
                 <div>
                   <h3 style={{ fontSize: 15, fontWeight: 700, color: C.bege, marginBottom: 2, fontFamily: "'Montserrat', sans-serif" }}>{v.nome}</h3>
                   <p style={{ fontSize: 12, color: 'rgba(232,220,197,0.7)', fontWeight: 300, fontFamily: "'Montserrat', sans-serif" }}>{v.desc}</p>
@@ -297,7 +301,7 @@ export default function Home() {
                 <div style={{ width: 6, flexShrink: 0, background: s.cor }} />
                 <div style={{ padding: '20px 18px', flex: 1 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-                    <span style={{ fontSize: 24 }}>{s.icon}</span>
+                    <span style={{ display: 'flex', alignItems: 'center' }}>{s.icon}</span>
                     <span style={{ fontSize: 13, fontWeight: 700, color: C.verde, textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'Montserrat', sans-serif" }}>{s.titulo}</span>
                   </div>
                   <p style={{ fontSize: 13, color: '#7a6a55', lineHeight: 1.65, fontWeight: 300, fontFamily: "'Montserrat', sans-serif" }}>{s.desc}</p>
@@ -343,6 +347,33 @@ export default function Home() {
         </footer>
 
       </main>
+
+      {/* WhatsApp flutuante */}
+      <a
+        href="https://wa.me/SEUNUMERO"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: 'fixed',
+          bottom: 24,
+          right: 24,
+          zIndex: 999,
+          background: '#25D366',
+          color: '#fff',
+          width: 56,
+          height: 56,
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 4px 20px rgba(37,211,102,0.5)',
+          transition: 'transform 0.2s ease',
+        }}
+        onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.1)')}
+        onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+      >
+        <WhatsappLogoIcon size={30} weight="fill" />
+      </a>
     </>
   )
 }
