@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import {
   CheckCircleIcon, HandHeartIcon, ButterflyIcon, HandsPrayingIcon, UsersThreeIcon, HeartbeatIcon,
@@ -98,6 +98,8 @@ function ImgPlaceholder({ label, aspect = '3/4', icon = '📷' }: { label: strin
 
 export default function Home() {
   useReveal()
+  const [modalAberto, setModalAberto] = useState(false)
+  useEffect(() => { setModalAberto(true) }, [])
 
   const valores = [
     { num: '01', nome: 'Verdade', desc: 'Buscar e viver a verdade que liberta', icon: <CheckCircleIcon size={20} weight="duotone" /> },
@@ -177,6 +179,71 @@ export default function Home() {
         .dot:nth-child(2) { animation-delay: 0.2s; }
         .dot:nth-child(3) { animation-delay: 0.4s; }
       `}</style>
+
+      {modalAberto && (
+        <div
+          onClick={() => setModalAberto(false)}
+          style={{
+            position: 'fixed', inset: 0, zIndex: 1000,
+            background: 'rgba(0,0,0,0.65)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            padding: 24,
+          }}
+        >
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{
+              background: C.bege,
+              borderRadius: 20,
+              padding: '32px 28px',
+              maxWidth: 320,
+              width: '100%',
+              textAlign: 'center',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.4)',
+              position: 'relative',
+            }}
+          >
+            <p style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              fontSize: '2rem',
+              color: C.verde,
+              letterSpacing: '0.04em',
+              marginBottom: 16,
+            }}>
+              · Atenção! ·
+            </p>
+            <p style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontSize: 16,
+              fontWeight: 600,
+              color: C.verdeEscuro,
+              lineHeight: 1.6,
+              marginBottom: 28,
+            }}>
+              Esse formulário de inscrição é válido apenas para o encontro do dia <span style={{ color: C.azul }}>16/05</span>!
+            </p>
+            <button
+              onClick={() => setModalAberto(false)}
+              style={{
+                background: C.verde,
+                color: C.bege,
+                border: 'none',
+                borderRadius: 12,
+                padding: '14px 32px',
+                fontFamily: "'Montserrat', sans-serif",
+                fontWeight: 700,
+                fontSize: 13,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                cursor: 'pointer',
+                width: '100%',
+              }}
+            >
+              Entendi!
+            </button>
+          </div>
+        </div>
+      )}
 
       <main>
 
