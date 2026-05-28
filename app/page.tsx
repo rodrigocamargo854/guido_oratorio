@@ -220,7 +220,7 @@ export default function Home() {
               lineHeight: 1.6,
               marginBottom: 28,
             }}>
-             Próximo encontro dia <span style={{ color: C.azul }}>29/06</span>!
+             Próximo encontro dia <span style={{ color: C.azul }}>27/06</span>!
             </p>
             <button
               onClick={() => setModalAberto(false)}
