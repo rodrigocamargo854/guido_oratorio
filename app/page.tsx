@@ -220,7 +220,7 @@ export default function Home() {
               lineHeight: 1.6,
               marginBottom: 28,
             }}>
-              Esse formulário de inscrição é válido apenas para o encontro do dia <span style={{ color: C.azul }}>16/05</span>!
+             Próximo encontro dia <span style={{ color: C.azul }}>29/06</span>!
             </p>
             <button
               onClick={() => setModalAberto(false)}
@@ -338,7 +338,6 @@ export default function Home() {
             <SectionTitle color={C.branco}>Confirme sua<br />presença</SectionTitle>
             <p style={{ fontSize: 14, fontWeight: 300, color: 'rgba(232,220,197,0.6)', maxWidth: 300, margin: '0 auto', fontFamily: "'Montserrat', sans-serif" }}>
               {/* SUBSTITUIR — descrição do encontro, data, local */}
-              SUBSTITUIR — data e local do encontro
             </p>
           </div>
 
