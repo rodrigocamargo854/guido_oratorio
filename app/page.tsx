@@ -343,10 +343,23 @@ export default function Home() {
 
           <div className="reveal d2" style={{ maxWidth: 420, margin: '0 auto', position: 'relative', zIndex: 1 }}>
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfkOYRtGGi95BLmeGuUUnDjbkSIxpUXWdRhOE0_BmTHGoJWcg/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdJAqhUFjX9lChm8BDza2k_xL5ewNGTL4VfTDdkAej5X6U1_Q/viewform?usp=header"
               width="100%"
               height="700"
               style={{ border: 'none', borderRadius: 20, display: 'block' }}
+            />
+          </div>
+
+          <div className="reveal d3" style={{ textAlign: 'center', marginTop: 40, position: 'relative', zIndex: 1 }}>
+            <p style={{ fontSize: 12, color: 'rgba(232,220,197,0.6)', marginBottom: 16, fontFamily: "'Montserrat', sans-serif", letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              Ou escaneie o QR Code
+            </p>
+            <Image
+              src="/qrcode.png"
+              alt="QR Code para o formulário"
+              width={180}
+              height={180}
+              style={{ borderRadius: 12, background: 'white', padding: 10 }}
             />
           </div>
         </section>
@@ -467,7 +480,7 @@ export default function Home() {
 
       {/* WhatsApp flutuante */}
      /* <a
-        href="https://wa.me/SEUNUMERO"
+        href="https://chat.whatsapp.com/ItxwWQ7tSisABWGAGcBgUt"
         target="_blank"
         rel="noopener noreferrer"
         style={{
