@@ -212,16 +212,13 @@ export default function Home() {
             }}>
               · Atenção! ·
             </p>
-            <p style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontSize: 16,
-              fontWeight: 600,
-              color: C.verdeEscuro,
-              lineHeight: 1.6,
-              marginBottom: 28,
-            }}>
-             Próximo encontro dia <span style={{ color: C.azul }}>27/06</span>!
-            </p>
+            <Image
+              src="/encaberto.jpeg"
+              alt="Próximo encontro"
+              width={260}
+              height={260}
+              style={{ width: '100%', height: 'auto', borderRadius: 12, marginBottom: 28 }}
+            />
             <button
               onClick={() => setModalAberto(false)}
               style={{
