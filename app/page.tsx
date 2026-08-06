@@ -282,7 +282,7 @@ export default function Home() {
               <a href="#forms" style={{ background: C.azulClaro, color: C.branco, padding: '18px 24px', borderRadius: 14, fontWeight: 700, fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', textDecoration: 'none', textAlign: 'center', boxShadow: '0 8px 32px rgba(46,111,149,0.5)', fontFamily: "'Montserrat', sans-serif", display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
                 <CalendarCheckIcon size={18} weight="bold" /> Confirme sua presença
               </a>
-              <a href="#guido" style={{ background: 'transparent', color: 'rgba(232,220,197,0.7)', padding: '16px 24px', borderRadius: 14, fontWeight: 600, fontSize: 13, letterSpacing: '0.06em', textDecoration: 'none', textAlign: 'center', border: '1.5px solid rgba(232,220,197,0.2)', fontFamily: "'Montserrat', sans-serif" }}>
+              <a href="https://www.guidoschaffer.com.br/?utm_source=chatgpt.com" style={{ background: 'transparent', color: 'rgba(232,220,197,0.7)', padding: '16px 24px', borderRadius: 14, fontWeight: 600, fontSize: 13, letterSpacing: '0.06em', textDecoration: 'none', textAlign: 'center', border: '1.5px solid rgba(232,220,197,0.2)', fontFamily: "'Montserrat', sans-serif" }}>
                 Conheça o Guido →
               </a>
             </div>
@@ -321,7 +321,7 @@ export default function Home() {
           </div>
 
           <div style={{ textAlign: 'center' }} className="reveal d3">
-            <a href="#" style={{ background: C.verde, color: C.bege, padding: '16px 28px', borderRadius: 12, fontWeight: 700, fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-block', fontFamily: "'Montserrat', sans-serif" }}>
+            <a href="https://www.guidoschaffer.com.br/" target="_blank" rel="noopener noreferrer" style={{ background: C.verde, color: C.bege, padding: '16px 28px', borderRadius: 12, fontWeight: 700, fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-block', fontFamily: "'Montserrat', sans-serif" }}>
               Ver site do Guido →
             </a>
           </div>
