@@ -327,7 +327,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="forms" style={{ background: C.azulClaro, padding: '72px 24px', position: 'relative', overflow: 'hidden' }}>
+        <section id="forms" style={{ display: 'none', background: C.azulClaro, padding: '72px 24px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', bottom: -100, right: -60, width: 280, height: 280, borderRadius: '50%', background: 'rgba(255,255,255,0.04)', pointerEvents: 'none' }} />
 
           <div style={{ textAlign: 'center', marginBottom: 32, position: 'relative', zIndex: 1 }} className="reveal">
