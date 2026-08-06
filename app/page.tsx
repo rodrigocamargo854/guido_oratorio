@@ -213,7 +213,7 @@ export default function Home() {
               · Atenção! ·
             </p>
             <Image
-              src="/oratorio.jpeg"
+              src="/dataag.jpeg"
               alt="Próximo encontro"
               width={260}
               height={260}
